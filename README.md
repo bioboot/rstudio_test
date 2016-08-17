@@ -21,7 +21,10 @@ This is particularly important on Windows where it may not default correctly (e.
 
 
 
-## XXX 
+## Optional, enable passwd-less push and pull to GitHub
+Click **Tools > Global Options** then select the **Git/SVN** tab and make sure the **Enable version control interface for RStudio projects** is clicked.
+
+![img1](http://www.datasurg.net/wp-content/uploads/2015/07/1.jpg)
 Now hit, **Create RSA Key**.
 
 ![img2](http://www.datasurg.net/wp-content/uploads/2015/07/2_rsa.jpg)
@@ -31,6 +34,10 @@ Close this window.
 Click, **View public key**, and copy the displayed public key. 
 
 ![img3](http://www.datasurg.net/wp-content/uploads/2015/07/4_rsa.jpg)
+
+This text should should now be pasted into GitHub. On GitHub open your account settings and click the SSH keys tab. Click Add SSH key. Now paste in the public key you have copied from RStudio.
+
+![img10](http://www.datasurg.net/wp-content/uploads/2015/07/6_add_key.jpg)
 
 
 ## 2. Configuring Git 
