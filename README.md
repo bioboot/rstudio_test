@@ -1,16 +1,17 @@
 # Using Git and GitHub with RStudio
 
-## Setting up Git with RStudio
-Prior to using Git with RStudio you should install git using the appropriate method for your type of computer platform. See: http://git-scm.com/downloads
+## 1. Setting up Git with RStudio
+> Prior to using Git with RStudio you should install git using the appropriate method for your type of computer platform. See: http://git-scm.com/downloads
 
-Once installed you'll need to activate git within RStudio on your system by following these steps in RStudio itself:
+Once you have git installed you'll need to activate it within RStudio by following these steps in RStudio itself:
 
 Click **Tools > Global Options** then select the **Git/SVN** tab and click **Enable version control interface for RStudio projects**.
 
 ![img1](http://www.datasurg.net/wp-content/uploads/2015/07/1.jpg)
  
-Ensure the path to the Git executable is correct. This is particularly important in Windows where it may not default correctly (e.g. C:/Program Files (x86)/Git/bin/git.exe).
+If you are on Windows please ensure that the path to the Git executable is correct. This is particularly important in Windows where it may not default correctly (e.g. C:/Program Files (x86)/Git/bin/git.exe).
 
+## XXX 
 Now hit, **Create RSA Key**.
 
 ![img2](http://www.datasurg.net/wp-content/uploads/2015/07/2_rsa.jpg)
@@ -22,12 +23,15 @@ Click, **View public key**, and copy the displayed public key.
 ![img3](http://www.datasurg.net/wp-content/uploads/2015/07/4_rsa.jpg)
 
 
-## Create a GitHub account
-If you haven’t already, create a GitHub account at https://github.com  
-Once you have done this we can begin creating and tracking content in RStudio.
+## 2. Configuring Git 
+Tell Git who you are. Remember Git is a piece of software running on your own computer. This is distinct to GitHub (that we will talk about later), which is the repository website. In RStudio, click **Tools > Shell ... > Enter**. Then paste in the following with substituting your name and email in place of mine below:
+
+	git config --global user.email "bjgrant@umich.edu" 
+	git config --global user.name "Barry Grant"
 
 
-## Creating an RStudio project
+
+## 3. Using Git in an RStudio project
 
 Lets begin creating content by opening a new **RStudio Project**. Projects are a good way to organize your work. It is similar to creating a new folder/directory and using it to store all the files related to a particular project.  
 To do this click **File > New Project > New Directory > Empty Project**
@@ -49,49 +53,38 @@ This will create a new document in your project. Save this with the name **RStud
 > Note don't use spaces in your files names please - unix systems don't like this.
 
 Now in RStudio a black-red-green GIT icon on the top toolbar. Click this and then **Git > Commit...**
-This should bring up a new window where we can "Stage" or Add our files and for version control tracking and provide a descriptive commit message.  
+This should bring up a new window where we can "Stage" or Add our files for version control tracking and provide a descriptive commit message.  
 
-Stop here for a demo from Barry if you like.
+Stop here for a demo from Barry along with further discussion. If you finish early feel free to keep going if you like.
 
-Control, select Git.
 
-f you haven’t already, create a GitHub account. Open your account settings and click the SSH keys tab. Click Add SSH key. Paste in the public key you have copied from RStudio.
 
-Tell Git who you are. Remember Git is a piece of software running on your own computer. This is distinct to GitHub, which is the repository website. In RStudio, click Tools -> Shell … . Enter:
 
-	git config --global user.email "mail@ewenharrison.com" 
-	git config --global user.name "ewenharrison"
+## 4. Create a GitHub account
+If you haven’t already, create a GitHub account at https://github.com. Make sure you pick the free plan.
 
-Use your GitHub username.
+Once you have done this we can begin creating and tracking your RStudio projects on GitHub. 
 
-![img5](http://www.datasurg.net/wp-content/uploads/2015/04/10_who_are_you.jpg)
-
-## CREATE NEW PROJECT AND GITHUB REPO
-
-In RStudio, click New project as normal. Click New Directory.
-
-Open a new **R Markdown** document > From Template > GitHub Document.
-
-![img6](http://www.datasurg.net/wp-content/uploads/2015/07/7_new_project.jpg)
-
-Now you want to push the contents of this commit to GitHub, so it is also backed-up off site and available to collaborators. 
 In GitHub, create a New repository by clicking the plus **+** in the top nav bar here and then **New repository**. I named mine “test”.
 
 ![img7](http://www.datasurg.net/wp-content/uploads/2015/07/8_new_project_with_git.jpg)
 
 ![img8](http://www.datasurg.net/wp-content/uploads/2015/07/5_create_git.jpg)
 
-## Add the repo to RStudio
+
+## 5. Add your GitHub repository to your RStudio project
 On the resulting GitHub web page copy the text under _”…or push an existing repository from the command line”_.  We will need to add this to our RStudio project.
 
-Then in RStudio, again click Tools -> Shell … . Enter:
+Back in RStudio, again click **Tools > Shell … . Enter**:
 
-And then paste your copyed code in to the shell. Mine looked something like this:
+And then paste your coped code in to the shell. Mine looked something like this:
 
 	git remote add origin https://github.com/bioboot/test.git 
 	git config remote.origin.url git@github.com:bioboot/test.git 
 	git push -u origin master
 	
+You can close the shell after this and return to RStudio. 
+
 After saving your new script (test.R), it should appear in the Git tab on the Environment / history panel.
 
 ![img9](http://www.datasurg.net/wp-content/uploads/2015/07/13_push_pull.jpg)
@@ -128,4 +121,4 @@ Click, View public key, and copy the displayed public key.
 
 ![img3](http://www.datasurg.net/wp-content/uploads/2015/07/4_rsa.jpg)
 
-I
+
