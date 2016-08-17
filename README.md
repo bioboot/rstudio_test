@@ -1,8 +1,32 @@
-# rstudio_test
-This is a set of instructions for class  
+# Using Git and GitHub with RStudio
+Lets begin by opening a new **RStudio Project**. To do this click **File > New Project > New Directory > Empty Project**
+
+![img6](http://www.datasurg.net/wp-content/uploads/2015/07/7_new_project.jpg)
+
+![img7](http://www.datasurg.net/wp-content/uploads/2015/07/8_new_project_with_git.jpg)
+
+Lets give your project the name **Test** and set the location to your **Desktop** folder.  
+> Also please be sure to click the optional **Create a git repository** option!!!
+
+This will start a new clean RStudio session. Note if you have done this properly then two files will be placed in your new directory/folder named Test (you can see these in your Files pane of RStudio interface). We will talk more about these later. If you dont see these files then please let me know.
+
+## Create some new content that we will track with Git and add to GitHub.
+In RStudio, click **File -> New File > *R Markdown document > From Template > GitHub Document > OK**.
+This will create a new document in your project. Save this with the name **RStudio_report**. 
+
+> Note dont use spaces in your files names please - unix systems dont like this.
+
+Now in RStudio a black-red-green GIT icon on the top toolbar. Click this and then **Git > Commit...**
+This should bring up a new window where we can "Stage" or Add our files and for version control tracking and provide a descriptive commit message.  
+
+Stop here for a demo from Barry if you like.
+
+Control, select Git.
+
+
 
 ## Setup Git within RStudio and associate with GitHub
-In RStudio, Tools -> Version Control, select Git.
+In RStudio, click **Tools -> Version Control, select Git.
 
 ![img1](http://www.datasurg.net/wp-content/uploads/2015/07/1.jpg)
  
