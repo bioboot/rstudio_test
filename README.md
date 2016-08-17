@@ -87,8 +87,6 @@ Once you have done this we can begin creating and tracking your RStudio projects
 
 In GitHub, create a New repository by clicking the plus **+** icon in the top navigation bar here and then **New repository**. I named mine “test”.
 
-![img7](http://www.datasurg.net/wp-content/uploads/2015/07/8_new_project_with_git.jpg)
-
 ![img8](http://www.datasurg.net/wp-content/uploads/2015/07/5_create_git.jpg)
 
 
