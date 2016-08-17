@@ -4,15 +4,19 @@ This is a set of instructions for class
 ## Setup Git within RStudio and associate with GitHub
 In RStudio, Tools -> Version Control, select Git.
 
+![img1](http://www.datasurg.net/wp-content/uploads/2015/07/1.jpg)
  
-
 In RStudio, Tools -> Global Options, select Git//SVN tab. Ensure the path to the Git executable is correct. This is particularly important in Windows where it may not default correctly (e.g. C:/Program Files (x86)/Git/bin/git.exe).
 
 Now hit, Create RSA Key …
 
+![img2](http://www.datasurg.net/wp-content/uploads/2015/07/2_rsa.jpg)
+
 Close this window.
 
 Click, View public key, and copy the displayed public key.
+
+![img3](http://www.datasurg.net/wp-content/uploads/2015/07/4_rsa.jpg)
 
 If you haven’t already, create a GitHub account. Open your account settings and click the SSH keys tab. Click Add SSH key. Paste in the public key you have copied from RStudio.
 
@@ -23,22 +27,37 @@ Tell Git who you are. Remember Git is a piece of software running on your own co
 
 Use your GitHub username.
 
+![img5](http://www.datasurg.net/wp-content/uploads/2015/04/10_who_are_you.jpg)
+
 ## CREATE NEW PROJECT AND GITHUB REPO
 
 In RStudio, click New project as normal. Click New Directory.
 
 Open a new **R Markdown** document > From Template > GitHub Document.
 
-Now you want to push the contents of this commit to GitHub, so it is also backed-up off site and available to collaborators. In GitHub, create a New repository, called here test.
+![img6](http://www.datasurg.net/wp-content/uploads/2015/07/7_new_project.jpg)
 
- Click the + here and new repository. I named mine “rstudio_test”
+Now you want to push the contents of this commit to GitHub, so it is also backed-up off site and available to collaborators. 
+In GitHub, create a New repository by clicking the plus **+** in the top nav bar here and then **New repository**. I named mine “test”.
+
+![img7](http://www.datasurg.net/wp-content/uploads/2015/07/8_new_project_with_git.jpg)
+
+![img8](http://www.datasurg.net/wp-content/uploads/2015/07/5_create_git.jpg)
 
 ## Add the repo to RStudio
-Copy the text under _”…or push an existing repository from the command line”_ displayed on the GitHub page. We will need to add this to our RStudio project.
+On the resulting GitHub web page copy the text under _”…or push an existing repository from the command line”_.  We will need to add this to our RStudio project.
 
 Then in RStudio, again click Tools -> Shell … . Enter:
 
-And then paste your copyed code in to the shell.
+And then paste your copyed code in to the shell. Mine looked something like this:
+
+	git remote add origin https://github.com/bioboot/test.git 
+	git config remote.origin.url git@github.com:bioboot/test.git 
+	git push -u origin master
+	
+After saving your new script (test.R), it should appear in the Git tab on the Environment / history panel.
+
+![img9](http://www.datasurg.net/wp-content/uploads/2015/07/13_push_pull.jpg)
 
 You have now pushed your commit to GitHub, and should be able to see your files in your GitHub account. The Pull Push buttons in RStudio will now also work. Remember, after each Commit, you have to Push to GitHub, this doesn’t happen automatically.
 
