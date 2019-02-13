@@ -21,7 +21,7 @@ This is particularly important on Windows where it may not default correctly (e.
 
 
 
-## Optional, enable passwd-less push and pull to GitHub
+## 1B. Optional, enable passwd-less push and pull to GitHub
 Click **Tools > Global Options** then select the **Git/SVN** tab and make sure the **Enable version control interface for RStudio projects** is clicked.
 
 ![img1](http://www.datasurg.net/wp-content/uploads/2015/07/1.jpg)  
